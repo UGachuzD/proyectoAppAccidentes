@@ -3,10 +3,10 @@ from gtts import gTTS
 import os
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+from config import MONGO_URI
 
 # Conexion con MongoDB
-uri = "mongodb+srv://gachuz:kgL8Gjc0FCtnYSdU@accidentes-viales.x4eth4z.mongodb.net/?retryWrites=true&w=majority"
-client = MongoClient(uri, server_api=ServerApi('1'))
+client = MongoClient(MONGO_URI, server_api=ServerApi('1'))
 db = client["accidentesvialescmdx"]
 collection = db["accidentesvialescmdx20222023"]
 
